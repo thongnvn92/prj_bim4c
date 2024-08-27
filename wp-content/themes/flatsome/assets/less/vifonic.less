@@ -1,0 +1,212 @@
+@primary_color : #fab207;
+@second_color : #111;
+
+
+.callFont(@font-family:"Open Sans", @font-style:normal, @font-size: 16px, @color: @second_color){
+    font-family: @font-family;
+    font-style: @font-style;
+    font-size: @font-size;
+    color: @color;
+};
+.callFontAweasome(@content: "\f164",@font-size: 16px, @color: @second_color){
+    font-family: "FontAwesome";
+    content: @content;
+    font-size: @font-size;
+    color: @color;
+};
+/* Header */
+
+.dark .nav>li>a:hover, .dark .nav>li.active>a, .dark .nav>li>a.active, .nav-dark .nav>li>a:hover, .nav-dark .nav>li.active>a, .nav-dark a.plain:hover, .nav-dark .nav>li>a.active, .nav-dark .nav li.current-menu-ancestor>a, .nav-dark .nav li.current-menu-item>a {
+    color: @primary_color !important;
+}
+
+#header {
+    .nav > li > a {
+        font-weight: 400 !important;
+        color: #fff;
+    }
+    .nav-dropdown {
+        padding: 0;
+        li:hover{
+            background-color: @primary_color;
+            a {
+                color: @second_color !important;
+            }
+        }
+        li.active{
+            a{
+                color: @primary_color;
+            }
+        }
+
+    }
+}
+
+/* BLOG */
+@media screen and (min-width: 850px) and (max-width: 1200px) {
+    .large-columns-2 .col.post-item {
+        min-height: 360px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .large-columns-2 .col.post-item {
+        min-height: 395px;
+    }
+}
+/* Image Lightbox */
+.mfp-gallery{
+    .mfp-close{
+        right: 15px;
+    }
+    .mfp-arrow-left{
+        left: 15px;
+    }
+    .mfp-arrow-right{
+        right: 15px;
+    }
+}
+
+
+/* PAGE HEADER PARALLAX */
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .parallax-wrapper{
+        background: rgba(0,0,0,0.3);
+        padding-top: 100px;
+        padding-bottom: 15px;
+        #lux_page_header {
+            h1{
+                display: inline-block;
+                width: auto;
+                color: #eceff3;
+                margin-top: 80px;
+                font-size: 32px;
+                letter-spacing: 5px;
+                float: left;
+                padding-right: 40px;
+                margin-right: 40px;
+                text-transform: uppercase;
+            }
+            nav.breadcrumbs{
+                display: inline-block;
+                width: auto;
+                color: #eceff3;
+                margin-top: 80px;
+                font-size: 10px;
+                letter-spacing: 5px;
+                float: right;
+                padding-right: 40px;
+                margin-right: 40px;
+                text-transform: uppercase;
+                a{
+                    color: @primary_color;
+                }
+            }
+        }
+    }
+}
+
+/* Home Slider */
+.teaser-text {
+    font-size: 14px;
+    color: rgba(255,255,255,.5);
+    line-height: normal;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.text-item{
+    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-weight: normal;
+    line-height: 72px;
+    color: #fff;
+    padding:20px 0;
+    b {
+        font-weight: normal;
+        color: @primary_color;
+    }
+}
+
+/* DỊCH VỤ CỦA CHÚNG TÔI */
+.lux_title{
+    text-align: center;
+    h1{
+        color: @second_color;
+    }
+    .separator {
+        line-height: 0.5;
+        text-align: center;
+        margin:20px 0 20px 0;
+        span {
+            display: inline-block;
+            position: relative;
+            &:before, &:after{
+                content: "";
+                position: absolute;
+                border-bottom: 1px solid rgba(0,0,0,.2);
+                top: 5px;
+                width: 300px;
+            }
+            &:before {
+                right: 100%;
+                margin-right: 15px;
+            }
+            &:after {
+                left: 100%;
+                margin-left: 15px;
+            }
+            i{
+                font-size:6px;
+                padding:0;
+                margin:0;
+                float:none;
+                color: @primary_color;
+            }
+        }
+    }
+}
+.lux_services{
+    .service-item{
+        .service-icon{
+            display: inline-block;
+            float: left;
+        }
+        .lux_icon1:before{
+            .callFontAweasome("\f015", 50px, @primary_color);
+        }
+        .lux_icon2:before{
+            .callFontAweasome("\f091", 50px, @primary_color);
+        }
+        .lux_icon3:before{
+            .callFontAweasome("\f080", 50px, @primary_color);
+        }
+
+        .service-content{
+            margin-left: 70px;
+        }
+    }
+}
+
+/* KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI */
+.lux_testimonial{
+    .lux_title{
+        text-align: center;
+        h1{
+            color: #FFF;
+        }
+    }
+    .slider-wrapper{
+        .col-inner{
+            background-color:rgba(0, 0, 0, 0.5);
+            padding:20px 30px;
+        }
+    }
+}
